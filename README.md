@@ -1,59 +1,54 @@
-
-
+````markdown
 # Nymic 🔍
 
-A fast Roblox username availability checker with a live grayscale log display.
+A fast Roblox username availability checker with a live grayscale console output.  
 
-Nymic generates usernames in different styles (words, digits, random sequences, etc.) and checks them against the Roblox signup API. Results are written to text files for each mode, and displayed in real-time with a smooth **dark gray → white → dark gray looping gradient** in the console.
-
----
-
-## ✨ Features
-
-* Multiple username generation modes (words, digits, random combos, barcodes, etc.)
-* Live animated console output with grayscale gradient logging
-* Saves **available usernames** into mode-specific `.txt` files
-* Saves **taken usernames** into `failed.txt`
-* Works with or without proxies
-* Built-in **installer/launcher (`run.bat`)** → auto-installs Python + all requirements if missing
+Nymic generates usernames in modes like words, digits, random combos, and barcodes, checks availability via the Roblox signup API, logs them in real time with a **dark-gray ↔ white looping gradient**, and saves results to text files.
 
 ---
 
-## 🚀 Quick Start (Windows)
+##  Features
 
-1. **Download this repo** (ZIP or `git clone`).
-2. Just **double-click `run.bat`**.
-
-   * If Python isn’t installed → it will auto-download & install Python 3.11 (with PATH + pip).
-   * Installs all required dependencies automatically.
-   * Then launches **Nymic**.
-3. **Pick modes from the menu** (`1,5,7` or `all`).
-4. Watch results stream in with a live gradient log.
+- Multiple generation modes (words, digits, barcodes, random combos)
+- Animated grayscale console log (dark gray → white → dark gray)
+- Results saved per mode (.txt files) and a `failed.txt` for taken names
+- Proxy support (optional) with automatic retry logic
+- One-click Windows launcher (`run.bat`): auto-installs Python + dependencies
 
 ---
 
-## 🐧 Linux/macOS (Manual Run)
+##  Quick Start (Windows)
 
-For non-Windows users, you’ll need Python 3.9+ and pip:
+1. Head to the [**Releases** page](https://github.com/gastrophobic/nymic/releases) and download the latest ZIP.
+2. Extract it anywhere.
+3. Double-click **`run.bat`**:
+   - Installs Python 3.11 (if needed, with PATH and pip),
+   - Installs required dependencies,
+   - Launches Nymic.
+4. Select mode(s) (`1,5,7` or `all`) and watch the gradient log do its thing.
+
+---
+
+##  Linux/macOS (Manual Run)
+
+For non-Windows users:
 
 ```bash
 pip install requests random_word colorama
 python nymic.py
-```
+````
 
 ---
 
-## 🌐 Proxy Support (Optional)
+## Proxy Support (Optional)
 
-* Nymic works **without proxies** by default.
-* For better speed & fewer rate limits:
+No proxy required—but for faster scanning and fewer rate limits:
 
-  1. Go to [ProxyScrape](https://proxyscrape.com/)
-  2. Sign up for a free account
-  3. You’ll get **100 free proxies** in your trial
-  4. Save them into a file named `proxies.txt` in the same folder as the script
+1. Visit [ProxyScrape](https://proxyscrape.com/) and sign up.
+2. Get a free trial with 100 proxies.
+3. Save them to `proxies.txt` in the script folder.
 
-Formats supported:
+Supported proxy formats:
 
 ```
 ip:port
@@ -62,16 +57,13 @@ ip:port:user:pass
 
 ---
 
-## 📂 Output Files
+## Output Files
 
-* `failed.txt` → taken usernames
-* `wordname.txt`, `5l.txt`, `4digits.txt`, etc. → available usernames
+* `failed.txt`: taken usernames
+* Mode files like `wordname.txt`, `5l.txt`, `4digits.txt`: available usernames
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
-This project is for **educational purposes only**.
-Use responsibly and respect Roblox’s terms of service.
-
-
+For educational use only. Respect Roblox’s terms of service.
