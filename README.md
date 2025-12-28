@@ -73,4 +73,3 @@ ip:port:user:pass
 This project is for **educational purposes only**.
 Use responsibly and respect Roblox’s terms of service.
 
-👉 Want me to also make a **short “Installation” GIF/screenshot section** so when people land on your repo they see exactly how to run it? That makes a big difference on GitHub.
